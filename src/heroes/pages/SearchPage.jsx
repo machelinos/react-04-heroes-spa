@@ -22,6 +22,8 @@ export const SearchPage = () => {
   const onSubmitSearch = (event)=>{
     event.preventDefault();
     
+    if(location.search === `?q=${searchText}` ) return;
+
     navigate(`?q=${searchText}`);
   }
 

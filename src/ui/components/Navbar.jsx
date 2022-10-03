@@ -1,17 +1,19 @@
 import { useContext } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context';
 
 
 export const Navbar = () => {
 
     const navigate = useNavigate();
+    const {pathname, search} = useLocation();
 
     const { authState, logout } = useContext(AuthContext);
 
     const onLogout = () => {
         logout();
 
+        localStorage.setItem('lastPage', pathname+search);
         navigate('/login', {
             replace: true
         })
