@@ -10,10 +10,7 @@ export const LoginPage = () => {
 
   const onLogin = () => {
 
-    login({
-      id: 'ABC',
-      name: 'Marcel Cabrera'
-    });
+    login('Marcel Cabrera');
     
     navigate('/',{
       replace: true
