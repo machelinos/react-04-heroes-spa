@@ -7,7 +7,5 @@ export const PrivateRouter = ({ children }) => {
     const { authState } = useContext(AuthContext);
     const lastPath = localStorage.getItem('lastPath');
 
-    console.log(lastPath);
-
     return (authState.logged) ? children : <Navigate to="/login" />
 }
