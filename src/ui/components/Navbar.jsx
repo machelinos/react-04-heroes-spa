@@ -56,11 +56,14 @@ export const Navbar = () => {
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <div className="navbar-nav ml-auto">
-                    <span className="nav-item nav-link text-primary">
+                    <span
+                        aria-label="username"
+                        className="nav-item nav-link text-primary">
                         { authState?.user?.name }
                     </span>
 
                     <button
+                        aria-label="logout"
                         className="nav-item nav-link btn btn-primary"
                         onClick={onLogout}
                     >
