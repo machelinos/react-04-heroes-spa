@@ -69,7 +69,9 @@ export const SearchPage = () => {
 
             {
               (q && heroes.length===0) && (
-                <div className="alert alert-danger">
+                <div
+                  aria-label="noresults"
+                  className="alert alert-danger">
                   There is no hero <strong>{ q }</strong>
                 </div>
               )
